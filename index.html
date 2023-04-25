@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta meta-equiv="X-UA-Compatible" content="IE=edge">
+	<title>STS Project </title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+</head>
+<style>
+	body {
+		background-color: rgb(19, 101, 201);
+	}
+
+	label, input, p {
+		font-family:'Courier New', Courier, monospace;
+		font-size: 1.5em;
+		font-weight: 800;
+		}
+
+	h1 {
+		font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+		font-size: 2.5em;
+		font-weight: 900;
+	}
+
+	#rslts {
+		font-family:'Courier New', Courier, monospace;
+		font-size: 1.5em;
+		font-weight: 800;
+	}
+
+	#textfield {
+		width: 50vw; 
+	}
+
+</style>
+<body>
+	<h1>Complete or Incomplete Sentence? Ask the AI himselff.</h1>
+	<p>Do you want to know if your sentence is a complete sentence?  Type it into the text box and click submit.  The trained AI will make an estimation and give you an answer(This may not always work) if it shows a wrong answer give it another try. As the training set is not large it will not always get it right but on phrases like "in the morning" it will pick up on the mistake  </p>
+	<div id="rslts">Training...please wait.</div>
+	<hr>
+
+	<label for="textfield">
+	Enter your sentence here:</label>
+	<input type="text" name="textfield" id="textfield">
+	<input onClick="execute(document.getElementById('textfield').value)" type="submit" name="submit" id="submit" value="Submit">
+	
+	
+	<script src="brain.js"></script>
+	<script src="training-data.js"></script>
+	<script src="script.js"></script>
+			
+	
+<br>
+	
+</body>
+	
+</html>
